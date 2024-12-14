@@ -1,0 +1,222 @@
+/* 1 button */
+:root {
+  --pink: #fc7fb2;
+  --white: #ffffff;
+  --grey: #ebeaf0;
+  --headingblack: #1e1e1e;
+  --bodytext: #b0afb6;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #f1e9e9;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.buttons {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.blob-btn {
+  position: relative;
+  padding: 20px 46px;
+  margin-bottom: 30px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--pink); /* Cyan */
+  font-size: 16px;
+  font-weight: bold;
+  background-color: transparent;
+  outline: none;
+  border: 2px solid var(--pink);
+  transition: color 0.5s;
+  cursor: pointer;
+  overflow: hidden;
+  border-radius: 30px;
+}
+
+.blob-btn:before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300%;
+  height: 300%;
+  background: radial-gradient(circle, var(--pink) 20%, transparent 40%);
+  transform: translate(-50%, -50%) scale(0);
+  border-radius: 50%;
+  transition: transform 0.4s ease-in-out;
+  z-index: -1;
+}
+
+.blob-btn:hover {
+  color: #ffffff;
+  border: 0;
+}
+
+.blob-btn:hover:before {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.blob-btn__inner {
+  position: relative;
+  z-index: 1;
+}
+
+/* login 1 button  */
+.login {
+  position: relative;
+  font-size: 30px;
+  padding: 14px;
+  background-color: var(--pink);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 220px;
+  border-radius: 35px;
+  margin-left: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+  /* display: inline-flex; */
+  text-align: center; /* Vertical alignment ke liye */
+}
+
+.login i {
+  opacity: 0; /* Arrow ko default main hide rakhein */
+  margin-left: 15px; /* Text aur arrow ke darmiyan space */
+  transition: opacity 0.3s, transform 0.3s; /* Smooth hover effect ke liye */
+}
+
+.login:hover {
+  background-color: palevioletred; /* Button ka color hover par change ho */
+}
+
+.login:hover i {
+  opacity: 1; /* Arrow hover par visible ho jaye */
+  transform: translateX(5px); /* Arrow ka movement */
+}
+
+.login:hover {
+  transform: translateX(-5px); /* Text ko thoda left move karein */
+}
+.login:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.login:after {
+  /* content: '<i class="fa-solid fa-arrow-right"></i>'; */
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -10px;
+  transition: 0.5s;
+}
+
+/* login2 */
+
+.signin {
+  position: relative;
+  font-size: 30px;
+  padding: 14px;
+  background-color: var(--pink);
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 220px;
+  border-radius: 35px;
+  margin-left: 10px;
+  transition: background-color 0.3s, transform 0.3s;
+  /* display: inline-flex; */
+  text-align: center; /* Vertical alignment ke liye */
+}
+
+.signin i {
+  opacity: 0; /* Arrow ko default main hide rakhein */
+  margin-left: 15px; /* Text aur arrow ke darmiyan space */
+  transition: opacity 0.3s, transform 0.3s; /* Smooth hover effect ke liye */
+}
+
+.signin:hover {
+  background-color: palevioletred; /* Button ka color hover par change ho */
+}
+
+.signin:hover i {
+  opacity: 1; /* Arrow hover par visible ho jaye */
+  transform: translateX(5px); /* Arrow ka movement */
+}
+
+.signin:hover {
+  transform: translateX(-5px); /* Text ko thoda left move karein */
+}
+.signin:hover:after {
+  opacity: 1;
+  right: 10px;
+}
+.signin:after {
+  /* content: '<i class="fa-solid fa-arrow-right"></i>'; */
+  position: absolute;
+  opacity: 0;
+  top: 14px;
+  right: -10px;
+  transition: 0.5s;
+}
+
+/* 3 */
+
+/* CSS */
+.button-3 {
+  align-items: center;
+  appearance: none;
+  background-color: #ffffff;
+  border-radius: 30px;
+  border-style: none;
+  box-sizing: border-box;
+  color: var(--pink);
+  cursor: pointer;
+  display: inline-flex;
+  fill: currentcolor;
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  justify-content: center;
+  letter-spacing: 0.25px;
+  line-height: normal;
+  max-width: 100%;
+  overflow: visible;
+  padding: 20px 46px;
+  position: relative;
+  text-align: center;
+  text-transform: none;
+  transition: box-shadow 280ms cubic-bezier(0.4, 0, 0.2, 1),
+    opacity 15ms linear 30ms, transform 270ms cubic-bezier(0, 0, 0.2, 1) 0ms;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: auto;
+  will-change: transform, opacity;
+  z-index: 0;
+}
+
+.button-3:hover {
+  background: #fdf4f4;
+  color: var(--pink);
+  padding: 20px 46px;
+}
+
+.button-3:active {
+  outline: none;
+}
+
+.button-3:focus {
+  outline: none;
+  border: 2px solid var(--pink);
+  padding: 20px 46px;
+}
